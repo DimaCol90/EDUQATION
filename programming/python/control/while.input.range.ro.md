@@ -16,3 +16,17 @@
   2. Sa se modifice codul de mai sus in asa mod incat daca utilizatorul introduce prima valoare mai mica si cea de a doua mai mare (de ex: 5 si 10) ciclul sa afiseze toate valorile in ordine crescatoare de la 5 la 10, iar daca valorile se introduc invers (de ex: 10 si 5) sa se afiseze toate numerele intregi in ordine descrescatoare din acest diapazon
   3. Utilizati **if/else** pentru a solutiona acest exemplu  
 
+-------------------------------------------
+start_n=int(input("start nr: "))
+end_n=int(input("end nr: "))
+
+if start_n > end_n:
+    dif=start_n-end_n
+    for i in range(dif+1):
+        print(start_n)
+        start_n-=1
+else:
+    dif=end_n-start_n
+    for i in range(dif+1):
+        print(start_n)
+        start_n+=1
