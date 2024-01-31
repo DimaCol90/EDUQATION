@@ -32,3 +32,14 @@
         ```
         ~~~wWw~~~~
         ```
+---------------------------------------------------------
+big_ship = int(input(">>>>> "))
+for x in range(1,11):
+    if x+1 == big_ship:
+      print( "W", end="" )
+    elif x==big_ship:
+       print("W",end="")
+    elif x-1==big_ship:
+       print("W", end="")
+    else:
+      print( "~", end="" )
