@@ -66,4 +66,64 @@
    8. #                 # 
    9. #                 # 
   10. # # # # # # # # # # 
-  ``` 
+  ```
+SCALE  = 10
+
+hX = 5
+hY = 4
+#--------------ZONA PERICULOASA------------
+map = "" 
+for y in range(SCALE):
+    map += str(y) + ". "
+    for x in range(SCALE):
+
+        if x == 0 or x == SCALE - 1 or y == 0 or y == SCALE - 1:
+            map += "# "
+        elif y+1==hY and (x-1==hX or x==hX or x+1==hX):
+            map+=("x ")
+        elif y==hY and (x-2==hX or x-1==hX or x+1==hX or x+2==hX):
+            map+=("x ")
+        elif y-1==hY and(x-1==hX or x==hX or x+1==hX):
+            map+=("x ")
+        elif x == hX and y == hY:
+            map += "H "
+          
+        else:
+            map += "  "
+
+    map += "\n"                
+
+print(map)
+
+#------------ZONA CU ZGOMOT SPORIT----------
+
+map = "" 
+for y in range(SCALE):
+    map += str(y) + ". "
+    for x in range(SCALE):
+
+        if x == 0 or x == SCALE - 1 or y == 0 or y == SCALE - 1:
+            map += "# "
+        elif y+2==hY and (x-1==hX or x==hX or x+1==hX):
+            map+=("~ ")
+        elif y+1==hY and (x-2==hX or x-1==hX or x==hX or x+1==hX or x+2==hX):
+            map+=("~ ")   
+   
+        elif y==hY and (x-2==hX or x-1==hX or x+1==hX or x+2==hX):
+            map+=("~ ")
+        elif y-1==hY and(x-2==hX or x-1==hX or x==hX or x+1==hX or x+2==hX):
+            map+=("~ ")
+  
+        elif y-2==hY and (x-1==hX or x==hX or x+1==hX):
+            map+=("~ ")    
+        elif x == hX and y == hY:
+            map += "H "      
+        else:
+            map += "  "
+
+    map += "\n"                
+
+print(map)        
+
+
+  
