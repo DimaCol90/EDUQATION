@@ -18,3 +18,17 @@
     3. pasiti iterativ (**for**) prin lista asamblata si "copiati" cate un element in lista finala NUMAI in cazul in care acesta NU EXISTA deja in lista finala (operatorul **in**)!
     * BONUS, dupa ce ati obtinut lista finala, sortati-o alfabetic inainte sa fie afisata!
 
+guests_1 = ["Bethaney Bain", "Kacey Johns", "Manpreet Saunders"]
+guests_2 = ["Elwood Curtis", "Diya Griffin", "Kacey Johns"]
+guests_3 = ["Tobey Weiss", "Kadie Barnes", "Diya Griffin"]
+
+guest_list = guests_1 + guests_2 + guests_3
+final_list = []
+
+for guest in guest_list:
+    if guest not in final_list:
+        final_list.append(guest)
+
+final_list.sort() 
+
+print(final_list)
